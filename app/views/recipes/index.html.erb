@@ -1,59 +1,63 @@
-<h1>Listing recipes</h1>
-
-<table>
+<%- model_class = Recipe -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Recipe %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Ingredients</th>
-      <th>Imagepath</th>
-      <th>Imagecredit</th>
-      <th>Yeild</th>
-      <th>Preptime</th>
-      <th>Cooktime</th>
-      <th>Totaltime</th>
-      <th>Rating</th>
-      <th>Commentnumber</th>
-      <th>Flikes</th>
-      <th>Tlikes</th>
-      <th>Plikes</th>
-      <th>Slikes</th>
-      <th>Glikes</th>
-      <th>Pubdate</th>
-      <th>Author</th>
-      <th>Source</th>
-      <th>Published</th>
-      <th>Calories</th>
-      <th>Caoriesfromfat</th>
-      <th>Totalfat</th>
-      <th>Totalfatper</th>
-      <th>Saturatedfar</th>
-      <th>Saturatedfatper</th>
-      <th>Transfat</th>
-      <th>Cholesterol</th>
-      <th>Cholesterolper</th>
-      <th>Sodium</th>
-      <th>Sodiumper</th>
-      <th>Carbs</th>
-      <th>Carbsper</th>
-      <th>Dietaryfiber</th>
-      <th>Dietaryfiberper</th>
-      <th>Sugars</th>
-      <th>Protein</th>
-      <th>Vitamina</th>
-      <th>Vitaminc</th>
-      <th>Calcium</th>
-      <th>Iron</th>
-      <th>Yumms</th>
-      <th>Shares</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:image) %></th>
+      <th><%= model_class.human_attribute_name(:ingredients) %></th>
+      <th><%= model_class.human_attribute_name(:imagepath) %></th>
+      <th><%= model_class.human_attribute_name(:imagecredit) %></th>
+      <th><%= model_class.human_attribute_name(:yeild) %></th>
+      <th><%= model_class.human_attribute_name(:preptime) %></th>
+      <th><%= model_class.human_attribute_name(:cooktime) %></th>
+      <th><%= model_class.human_attribute_name(:totaltime) %></th>
+      <th><%= model_class.human_attribute_name(:rating) %></th>
+      <th><%= model_class.human_attribute_name(:commentnumber) %></th>
+      <th><%= model_class.human_attribute_name(:flikes) %></th>
+      <th><%= model_class.human_attribute_name(:tlikes) %></th>
+      <th><%= model_class.human_attribute_name(:plikes) %></th>
+      <th><%= model_class.human_attribute_name(:slikes) %></th>
+      <th><%= model_class.human_attribute_name(:glikes) %></th>
+      <th><%= model_class.human_attribute_name(:pubdate) %></th>
+      <th><%= model_class.human_attribute_name(:author) %></th>
+      <th><%= model_class.human_attribute_name(:source) %></th>
+      <th><%= model_class.human_attribute_name(:published) %></th>
+      <th><%= model_class.human_attribute_name(:calories) %></th>
+      <th><%= model_class.human_attribute_name(:caoriesfromfat) %></th>
+      <th><%= model_class.human_attribute_name(:totalfat) %></th>
+      <th><%= model_class.human_attribute_name(:totalfatper) %></th>
+      <th><%= model_class.human_attribute_name(:saturatedfar) %></th>
+      <th><%= model_class.human_attribute_name(:saturatedfatper) %></th>
+      <th><%= model_class.human_attribute_name(:transfat) %></th>
+      <th><%= model_class.human_attribute_name(:cholesterol) %></th>
+      <th><%= model_class.human_attribute_name(:cholesterolper) %></th>
+      <th><%= model_class.human_attribute_name(:sodium) %></th>
+      <th><%= model_class.human_attribute_name(:sodiumper) %></th>
+      <th><%= model_class.human_attribute_name(:carbs) %></th>
+      <th><%= model_class.human_attribute_name(:carbsper) %></th>
+      <th><%= model_class.human_attribute_name(:dietaryfiber) %></th>
+      <th><%= model_class.human_attribute_name(:dietaryfiberper) %></th>
+      <th><%= model_class.human_attribute_name(:sugars) %></th>
+      <th><%= model_class.human_attribute_name(:protein) %></th>
+      <th><%= model_class.human_attribute_name(:vitamina) %></th>
+      <th><%= model_class.human_attribute_name(:vitaminc) %></th>
+      <th><%= model_class.human_attribute_name(:calcium) %></th>
+      <th><%= model_class.human_attribute_name(:iron) %></th>
+      <th><%= model_class.human_attribute_name(:yumms) %></th>
+      <th><%= model_class.human_attribute_name(:shares) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @recipes.each do |recipe| %>
       <tr>
+        <td><%= recipe.id %></td>
         <td><%= recipe.title %></td>
         <td><%= recipe.description %></td>
         <td><%= recipe.image %></td>
@@ -98,14 +102,21 @@
         <td><%= recipe.iron %></td>
         <td><%= recipe.yumms %></td>
         <td><%= recipe.shares %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l recipe.created_at, format: :long %></td>
+        <td>
+          <%= link_to recipe_path(recipe), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to recipe_path(recipe), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Recipe', new_recipe_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_recipe_path,
+            :class => 'btn btn-primary' %>

@@ -1,54 +1,274 @@
-<%= simple_form_for(@recipe) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :image %>
-    <%= f.input :ingredients %>
-    <%= f.input :imagepath %>
-    <%= f.input :imagecredit %>
-    <%= f.input :yeild %>
-    <%= f.input :preptime %>
-    <%= f.input :cooktime %>
-    <%= f.input :totaltime %>
-    <%= f.input :rating %>
-    <%= f.input :commentnumber %>
-    <%= f.input :flikes %>
-    <%= f.input :tlikes %>
-    <%= f.input :plikes %>
-    <%= f.input :slikes %>
-    <%= f.input :glikes %>
-    <%= f.input :pubdate %>
-    <%= f.input :author %>
-    <%= f.input :source %>
-    <%= f.input :published %>
-    <%= f.input :calories %>
-    <%= f.input :caoriesfromfat %>
-    <%= f.input :totalfat %>
-    <%= f.input :totalfatper %>
-    <%= f.input :saturatedfar %>
-    <%= f.input :saturatedfatper %>
-    <%= f.input :transfat %>
-    <%= f.input :cholesterol %>
-    <%= f.input :cholesterolper %>
-    <%= f.input :sodium %>
-    <%= f.input :sodiumper %>
-    <%= f.input :carbs %>
-    <%= f.input :carbsper %>
-    <%= f.input :dietaryfiber %>
-    <%= f.input :dietaryfiberper %>
-    <%= f.input :sugars %>
-    <%= f.input :protein %>
-    <%= f.input :vitamina %>
-    <%= f.input :vitaminc %>
-    <%= f.input :calcium %>
-    <%= f.input :iron %>
-    <%= f.input :yumms %>
-    <%= f.input :shares %>
+<%= form_for @recipe, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :title, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :description, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :image, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :image, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ingredients, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :ingredients, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :imagepath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :imagepath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :imagecredit, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :imagecredit, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :yeild, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :yeild, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :preptime, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :preptime, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cooktime, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cooktime, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :totaltime, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :totaltime, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :rating, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :rating, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :commentnumber, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :commentnumber, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :flikes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :flikes, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :tlikes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :tlikes, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :plikes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :plikes, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :slikes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :slikes, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :glikes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :glikes, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pubdate, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :pubdate, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :author, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :author, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :source, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :source, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :published, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :published, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :calories, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :calories, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :caoriesfromfat, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :caoriesfromfat, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :totalfat, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :totalfat, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :totalfatper, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :totalfatper, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :saturatedfar, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :saturatedfar, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :saturatedfatper, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :saturatedfatper, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :transfat, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :transfat, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cholesterol, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :cholesterol, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cholesterolper, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :cholesterolper, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sodium, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :sodium, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sodiumper, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :sodiumper, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :carbs, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :carbs, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :carbsper, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :carbsper, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dietaryfiber, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :dietaryfiber, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dietaryfiberper, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :dietaryfiberper, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sugars, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :sugars, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :protein, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :protein, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :vitamina, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :vitamina, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :vitaminc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :vitaminc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :calcium, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :calcium, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :iron, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :iron, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :yumms, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :yumms, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :shares, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :shares, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  recipes_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

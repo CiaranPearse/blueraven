@@ -1,224 +1,110 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Recipe -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Recipe %></h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @recipe.title %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.title %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:description) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.description %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:image) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.image %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ingredients) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.ingredients %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:imagepath) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.imagepath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:imagecredit) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.imagecredit %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:yeild) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.yeild %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:preptime) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.preptime %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cooktime) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.cooktime %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:totaltime) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.totaltime %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:rating) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.rating %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:commentnumber) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.commentnumber %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:flikes) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.flikes %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:tlikes) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.tlikes %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:plikes) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.plikes %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:slikes) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.slikes %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:glikes) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.glikes %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pubdate) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.pubdate %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:author) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.author %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:source) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.source %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:published) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.published %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:calories) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.calories %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:caoriesfromfat) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.caoriesfromfat %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:totalfat) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.totalfat %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:totalfatper) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.totalfatper %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:saturatedfar) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.saturatedfar %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:saturatedfatper) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.saturatedfatper %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:transfat) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.transfat %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cholesterol) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.cholesterol %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cholesterolper) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.cholesterolper %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:sodium) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.sodium %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:sodiumper) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.sodiumper %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:carbs) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.carbs %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:carbsper) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.carbsper %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:dietaryfiber) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.dietaryfiber %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:dietaryfiberper) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.dietaryfiberper %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:sugars) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.sugars %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:protein) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.protein %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:vitamina) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.vitamina %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:vitaminc) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.vitaminc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:calcium) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.calcium %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:iron) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.iron %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:yumms) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.yumms %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:shares) %></dt>
+      <dd><pre class="prettyprint"><%= @recipe.shares %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @recipe.description %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              recipes_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_recipe_path(@recipe), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              recipe_path(@recipe),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Image:</strong>
-  <%= @recipe.image %>
-</p>
-
-<p>
-  <strong>Ingredients:</strong>
-  <%= @recipe.ingredients %>
-</p>
-
-<p>
-  <strong>Imagepath:</strong>
-  <%= @recipe.imagepath %>
-</p>
-
-<p>
-  <strong>Imagecredit:</strong>
-  <%= @recipe.imagecredit %>
-</p>
-
-<p>
-  <strong>Yeild:</strong>
-  <%= @recipe.yeild %>
-</p>
-
-<p>
-  <strong>Preptime:</strong>
-  <%= @recipe.preptime %>
-</p>
-
-<p>
-  <strong>Cooktime:</strong>
-  <%= @recipe.cooktime %>
-</p>
-
-<p>
-  <strong>Totaltime:</strong>
-  <%= @recipe.totaltime %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @recipe.rating %>
-</p>
-
-<p>
-  <strong>Commentnumber:</strong>
-  <%= @recipe.commentnumber %>
-</p>
-
-<p>
-  <strong>Flikes:</strong>
-  <%= @recipe.flikes %>
-</p>
-
-<p>
-  <strong>Tlikes:</strong>
-  <%= @recipe.tlikes %>
-</p>
-
-<p>
-  <strong>Plikes:</strong>
-  <%= @recipe.plikes %>
-</p>
-
-<p>
-  <strong>Slikes:</strong>
-  <%= @recipe.slikes %>
-</p>
-
-<p>
-  <strong>Glikes:</strong>
-  <%= @recipe.glikes %>
-</p>
-
-<p>
-  <strong>Pubdate:</strong>
-  <%= @recipe.pubdate %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @recipe.author %>
-</p>
-
-<p>
-  <strong>Source:</strong>
-  <%= @recipe.source %>
-</p>
-
-<p>
-  <strong>Published:</strong>
-  <%= @recipe.published %>
-</p>
-
-<p>
-  <strong>Calories:</strong>
-  <%= @recipe.calories %>
-</p>
-
-<p>
-  <strong>Caoriesfromfat:</strong>
-  <%= @recipe.caoriesfromfat %>
-</p>
-
-<p>
-  <strong>Totalfat:</strong>
-  <%= @recipe.totalfat %>
-</p>
-
-<p>
-  <strong>Totalfatper:</strong>
-  <%= @recipe.totalfatper %>
-</p>
-
-<p>
-  <strong>Saturatedfar:</strong>
-  <%= @recipe.saturatedfar %>
-</p>
-
-<p>
-  <strong>Saturatedfatper:</strong>
-  <%= @recipe.saturatedfatper %>
-</p>
-
-<p>
-  <strong>Transfat:</strong>
-  <%= @recipe.transfat %>
-</p>
-
-<p>
-  <strong>Cholesterol:</strong>
-  <%= @recipe.cholesterol %>
-</p>
-
-<p>
-  <strong>Cholesterolper:</strong>
-  <%= @recipe.cholesterolper %>
-</p>
-
-<p>
-  <strong>Sodium:</strong>
-  <%= @recipe.sodium %>
-</p>
-
-<p>
-  <strong>Sodiumper:</strong>
-  <%= @recipe.sodiumper %>
-</p>
-
-<p>
-  <strong>Carbs:</strong>
-  <%= @recipe.carbs %>
-</p>
-
-<p>
-  <strong>Carbsper:</strong>
-  <%= @recipe.carbsper %>
-</p>
-
-<p>
-  <strong>Dietaryfiber:</strong>
-  <%= @recipe.dietaryfiber %>
-</p>
-
-<p>
-  <strong>Dietaryfiberper:</strong>
-  <%= @recipe.dietaryfiberper %>
-</p>
-
-<p>
-  <strong>Sugars:</strong>
-  <%= @recipe.sugars %>
-</p>
-
-<p>
-  <strong>Protein:</strong>
-  <%= @recipe.protein %>
-</p>
-
-<p>
-  <strong>Vitamina:</strong>
-  <%= @recipe.vitamina %>
-</p>
-
-<p>
-  <strong>Vitaminc:</strong>
-  <%= @recipe.vitaminc %>
-</p>
-
-<p>
-  <strong>Calcium:</strong>
-  <%= @recipe.calcium %>
-</p>
-
-<p>
-  <strong>Iron:</strong>
-  <%= @recipe.iron %>
-</p>
-
-<p>
-  <strong>Yumms:</strong>
-  <%= @recipe.yumms %>
-</p>
-
-<p>
-  <strong>Shares:</strong>
-  <%= @recipe.shares %>
-</p>
-
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
