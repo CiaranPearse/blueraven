@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  mail: false
+  seasonalmail: false
+  updates: false
+  polls: false
+  searchable: false
+  postfb: false
+  posttw: false
+  postpin: false
+  partnershare: false
+  diet: 
+  allergy: 
+  dislike: 
+
+two:
+  user_id: 
+  mail: false
+  seasonalmail: false
+  updates: false
+  polls: false
+  searchable: false
+  postfb: false
+  posttw: false
+  postpin: false
+  partnershare: false
+  diet: 
+  allergy: 
+  dislike: 
