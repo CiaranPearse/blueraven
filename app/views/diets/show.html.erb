@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @diet.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @diet.description %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @diet.icon %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @diet.image %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @diet.published %>
+</p>
+
+<p>
+  <strong>Heroclass:</strong>
+  <%= @diet.heroclass %>
+</p>
+
+<%= link_to 'Edit', edit_diet_path(@diet) %> |
+<%= link_to 'Back', diets_path %>
