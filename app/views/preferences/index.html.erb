@@ -1,29 +1,31 @@
-<h1>Listing preferences</h1>
-
-<table>
+<%- model_class = Preference -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Preference %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>User</th>
-      <th>Mail</th>
-      <th>Seasonalmail</th>
-      <th>Updates</th>
-      <th>Polls</th>
-      <th>Searchable</th>
-      <th>Postfb</th>
-      <th>Posttw</th>
-      <th>Postpin</th>
-      <th>Partnershare</th>
-      <th>Diet</th>
-      <th>Allergy</th>
-      <th>Dislike</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:mail) %></th>
+      <th><%= model_class.human_attribute_name(:seasonalmail) %></th>
+      <th><%= model_class.human_attribute_name(:updates) %></th>
+      <th><%= model_class.human_attribute_name(:polls) %></th>
+      <th><%= model_class.human_attribute_name(:searchable) %></th>
+      <th><%= model_class.human_attribute_name(:postfb) %></th>
+      <th><%= model_class.human_attribute_name(:posttw) %></th>
+      <th><%= model_class.human_attribute_name(:postpin) %></th>
+      <th><%= model_class.human_attribute_name(:partnershare) %></th>
+      <th><%= model_class.human_attribute_name(:diet) %></th>
+      <th><%= model_class.human_attribute_name(:allergy) %></th>
+      <th><%= model_class.human_attribute_name(:dislike) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @preferences.each do |preference| %>
       <tr>
-        <td><%= preference.user %></td>
+        <td><%= preference.id %></td>
         <td><%= preference.mail %></td>
         <td><%= preference.seasonalmail %></td>
         <td><%= preference.updates %></td>
@@ -36,14 +38,21 @@
         <td><%= preference.diet %></td>
         <td><%= preference.allergy %></td>
         <td><%= preference.dislike %></td>
-        <td><%= link_to 'Show', preference %></td>
-        <td><%= link_to 'Edit', edit_preference_path(preference) %></td>
-        <td><%= link_to 'Destroy', preference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l preference.created_at, format: :long %></td>
+        <td>
+          <%= link_to preference_path(preference), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to preference_path(preference), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Preference', new_preference_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_preference_path,
+            :class => 'btn btn-primary' %>

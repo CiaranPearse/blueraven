@@ -1,23 +1,82 @@
-<%= simple_form_for(@preference) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :user %>
-    <%= f.input :mail %>
-    <%= f.input :seasonalmail %>
-    <%= f.input :updates %>
-    <%= f.input :polls %>
-    <%= f.input :searchable %>
-    <%= f.input :postfb %>
-    <%= f.input :posttw %>
-    <%= f.input :postpin %>
-    <%= f.input :partnershare %>
-    <%= f.input :diet %>
-    <%= f.input :allergy %>
-    <%= f.input :dislike %>
+<%= form_for @preference, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :mail, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :mail, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :seasonalmail, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :seasonalmail, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :updates, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :updates, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :polls, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :polls, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :searchable, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :searchable, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :postfb, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :postfb, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :posttw, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :posttw, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :postpin, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :postpin, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :partnershare, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :partnershare, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :diet, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :diet, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :allergy, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :allergy, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dislike, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :dislike, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  preferences_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

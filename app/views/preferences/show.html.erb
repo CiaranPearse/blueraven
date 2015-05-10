@@ -1,69 +1,46 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Preference -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Preference %></h1>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @preference.user %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:mail) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.mail %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:seasonalmail) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.seasonalmail %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:updates) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.updates %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:polls) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.polls %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:searchable) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.searchable %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:postfb) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.postfb %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:posttw) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.posttw %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:postpin) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.postpin %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:partnershare) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.partnershare %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:diet) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.diet %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:allergy) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.allergy %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:dislike) %></dt>
+      <dd><pre class="prettyprint"><%= @preference.dislike %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Mail:</strong>
-  <%= @preference.mail %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              preferences_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_preference_path(@preference), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              preference_path(@preference),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Seasonalmail:</strong>
-  <%= @preference.seasonalmail %>
-</p>
-
-<p>
-  <strong>Updates:</strong>
-  <%= @preference.updates %>
-</p>
-
-<p>
-  <strong>Polls:</strong>
-  <%= @preference.polls %>
-</p>
-
-<p>
-  <strong>Searchable:</strong>
-  <%= @preference.searchable %>
-</p>
-
-<p>
-  <strong>Postfb:</strong>
-  <%= @preference.postfb %>
-</p>
-
-<p>
-  <strong>Posttw:</strong>
-  <%= @preference.posttw %>
-</p>
-
-<p>
-  <strong>Postpin:</strong>
-  <%= @preference.postpin %>
-</p>
-
-<p>
-  <strong>Partnershare:</strong>
-  <%= @preference.partnershare %>
-</p>
-
-<p>
-  <strong>Diet:</strong>
-  <%= @preference.diet %>
-</p>
-
-<p>
-  <strong>Allergy:</strong>
-  <%= @preference.allergy %>
-</p>
-
-<p>
-  <strong>Dislike:</strong>
-  <%= @preference.dislike %>
-</p>
-
-<%= link_to 'Edit', edit_preference_path(@preference) %> |
-<%= link_to 'Back', preferences_path %>
