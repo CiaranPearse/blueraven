@@ -1,0 +1,111 @@
+<h1>Listing recipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Ingredients</th>
+      <th>Imagepath</th>
+      <th>Imagecredit</th>
+      <th>Yeild</th>
+      <th>Preptime</th>
+      <th>Cooktime</th>
+      <th>Totaltime</th>
+      <th>Rating</th>
+      <th>Commentnumber</th>
+      <th>Flikes</th>
+      <th>Tlikes</th>
+      <th>Plikes</th>
+      <th>Slikes</th>
+      <th>Glikes</th>
+      <th>Pubdate</th>
+      <th>Author</th>
+      <th>Source</th>
+      <th>Published</th>
+      <th>Calories</th>
+      <th>Caoriesfromfat</th>
+      <th>Totalfat</th>
+      <th>Totalfatper</th>
+      <th>Saturatedfar</th>
+      <th>Saturatedfatper</th>
+      <th>Transfat</th>
+      <th>Cholesterol</th>
+      <th>Cholesterolper</th>
+      <th>Sodium</th>
+      <th>Sodiumper</th>
+      <th>Carbs</th>
+      <th>Carbsper</th>
+      <th>Dietaryfiber</th>
+      <th>Dietaryfiberper</th>
+      <th>Sugars</th>
+      <th>Protein</th>
+      <th>Vitamina</th>
+      <th>Vitaminc</th>
+      <th>Calcium</th>
+      <th>Iron</th>
+      <th>Yumms</th>
+      <th>Shares</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.title %></td>
+        <td><%= recipe.description %></td>
+        <td><%= recipe.image %></td>
+        <td><%= recipe.ingredients %></td>
+        <td><%= recipe.imagepath %></td>
+        <td><%= recipe.imagecredit %></td>
+        <td><%= recipe.yeild %></td>
+        <td><%= recipe.preptime %></td>
+        <td><%= recipe.cooktime %></td>
+        <td><%= recipe.totaltime %></td>
+        <td><%= recipe.rating %></td>
+        <td><%= recipe.commentnumber %></td>
+        <td><%= recipe.flikes %></td>
+        <td><%= recipe.tlikes %></td>
+        <td><%= recipe.plikes %></td>
+        <td><%= recipe.slikes %></td>
+        <td><%= recipe.glikes %></td>
+        <td><%= recipe.pubdate %></td>
+        <td><%= recipe.author %></td>
+        <td><%= recipe.source %></td>
+        <td><%= recipe.published %></td>
+        <td><%= recipe.calories %></td>
+        <td><%= recipe.caoriesfromfat %></td>
+        <td><%= recipe.totalfat %></td>
+        <td><%= recipe.totalfatper %></td>
+        <td><%= recipe.saturatedfar %></td>
+        <td><%= recipe.saturatedfatper %></td>
+        <td><%= recipe.transfat %></td>
+        <td><%= recipe.cholesterol %></td>
+        <td><%= recipe.cholesterolper %></td>
+        <td><%= recipe.sodium %></td>
+        <td><%= recipe.sodiumper %></td>
+        <td><%= recipe.carbs %></td>
+        <td><%= recipe.carbsper %></td>
+        <td><%= recipe.dietaryfiber %></td>
+        <td><%= recipe.dietaryfiberper %></td>
+        <td><%= recipe.sugars %></td>
+        <td><%= recipe.protein %></td>
+        <td><%= recipe.vitamina %></td>
+        <td><%= recipe.vitaminc %></td>
+        <td><%= recipe.calcium %></td>
+        <td><%= recipe.iron %></td>
+        <td><%= recipe.yumms %></td>
+        <td><%= recipe.shares %></td>
+        <td><%= link_to 'Show', recipe %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipe', new_recipe_path %>

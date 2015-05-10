@@ -1,0 +1,54 @@
+<%= simple_form_for(@recipe) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :image %>
+    <%= f.input :ingredients %>
+    <%= f.input :imagepath %>
+    <%= f.input :imagecredit %>
+    <%= f.input :yeild %>
+    <%= f.input :preptime %>
+    <%= f.input :cooktime %>
+    <%= f.input :totaltime %>
+    <%= f.input :rating %>
+    <%= f.input :commentnumber %>
+    <%= f.input :flikes %>
+    <%= f.input :tlikes %>
+    <%= f.input :plikes %>
+    <%= f.input :slikes %>
+    <%= f.input :glikes %>
+    <%= f.input :pubdate %>
+    <%= f.input :author %>
+    <%= f.input :source %>
+    <%= f.input :published %>
+    <%= f.input :calories %>
+    <%= f.input :caoriesfromfat %>
+    <%= f.input :totalfat %>
+    <%= f.input :totalfatper %>
+    <%= f.input :saturatedfar %>
+    <%= f.input :saturatedfatper %>
+    <%= f.input :transfat %>
+    <%= f.input :cholesterol %>
+    <%= f.input :cholesterolper %>
+    <%= f.input :sodium %>
+    <%= f.input :sodiumper %>
+    <%= f.input :carbs %>
+    <%= f.input :carbsper %>
+    <%= f.input :dietaryfiber %>
+    <%= f.input :dietaryfiberper %>
+    <%= f.input :sugars %>
+    <%= f.input :protein %>
+    <%= f.input :vitamina %>
+    <%= f.input :vitaminc %>
+    <%= f.input :calcium %>
+    <%= f.input :iron %>
+    <%= f.input :yumms %>
+    <%= f.input :shares %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
