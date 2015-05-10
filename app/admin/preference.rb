@@ -1,4 +1,5 @@
 ActiveAdmin.register Preference do
+  permit_params :mail, :seasonalmail, :updates, :polls, :searchable, :postfb, :posttw, :postpin, :partnershare, :diet, :allergy, :dislike
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
