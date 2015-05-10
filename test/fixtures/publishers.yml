@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  logo: MyString
+  url: MyString
+  published: false
+  heroclass: MyString
+  facebook: MyString
+  twitter: MyString
+  stumbleupon: MyString
+  pintrest: MyString
+  tumblr: MyString
+  googleplus: MyString
+  dummytags: MyText
+  sources: MyText
+
+two:
+  name: MyString
+  description: MyText
+  logo: MyString
+  url: MyString
+  published: false
+  heroclass: MyString
+  facebook: MyString
+  twitter: MyString
+  stumbleupon: MyString
+  pintrest: MyString
+  tumblr: MyString
+  googleplus: MyString
+  dummytags: MyText
+  sources: MyText
