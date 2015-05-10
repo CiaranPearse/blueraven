@@ -1,0 +1,23 @@
+<%= simple_form_for(@preference) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.input :mail %>
+    <%= f.input :seasonalmail %>
+    <%= f.input :updates %>
+    <%= f.input :polls %>
+    <%= f.input :searchable %>
+    <%= f.input :postfb %>
+    <%= f.input :posttw %>
+    <%= f.input :postpin %>
+    <%= f.input :partnershare %>
+    <%= f.input :diet %>
+    <%= f.input :allergy %>
+    <%= f.input :dislike %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

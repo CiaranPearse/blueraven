@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @preference.user %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @preference.mail %>
+</p>
+
+<p>
+  <strong>Seasonalmail:</strong>
+  <%= @preference.seasonalmail %>
+</p>
+
+<p>
+  <strong>Updates:</strong>
+  <%= @preference.updates %>
+</p>
+
+<p>
+  <strong>Polls:</strong>
+  <%= @preference.polls %>
+</p>
+
+<p>
+  <strong>Searchable:</strong>
+  <%= @preference.searchable %>
+</p>
+
+<p>
+  <strong>Postfb:</strong>
+  <%= @preference.postfb %>
+</p>
+
+<p>
+  <strong>Posttw:</strong>
+  <%= @preference.posttw %>
+</p>
+
+<p>
+  <strong>Postpin:</strong>
+  <%= @preference.postpin %>
+</p>
+
+<p>
+  <strong>Partnershare:</strong>
+  <%= @preference.partnershare %>
+</p>
+
+<p>
+  <strong>Diet:</strong>
+  <%= @preference.diet %>
+</p>
+
+<p>
+  <strong>Allergy:</strong>
+  <%= @preference.allergy %>
+</p>
+
+<p>
+  <strong>Dislike:</strong>
+  <%= @preference.dislike %>
+</p>
+
+<%= link_to 'Edit', edit_preference_path(@preference) %> |
+<%= link_to 'Back', preferences_path %>
