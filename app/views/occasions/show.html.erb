@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @occasion.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @occasion.description %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @occasion.icon %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @occasion.image %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @occasion.published %>
+</p>
+
+<p>
+  <strong>Heroclass:</strong>
+  <%= @occasion.heroclass %>
+</p>
+
+<%= link_to 'Edit', edit_occasion_path(@occasion) %> |
+<%= link_to 'Back', occasions_path %>
